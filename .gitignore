@@ -1,0 +1,78 @@
+# =====================================================
+# ZED Multi-Camera Calibration Project - .gitignore
+# =====================================================
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.p
+*.log
+*.tmp
+*.json.bak
+
+# IDE / Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.env/
+.venv/
+*.env
+
+# =====================================================
+# ZED / Camera data
+# =====================================================
+
+# Raw captured images
+cam0/*.png
+cam1/*.png
+cam2/*.png
+cam*/img_*.jpg
+cam*/img_*.png
+cam*/Explorer_*.png
+
+# StereoLab data formats
+*.svo
+*.zsl
+*.zed
+*.zedz
+*.bin
+
+# Calibration boards and results
+output/
+results/
+calib_output/
+extrinsics/
+*.yaml
+*.npz
+*.npy
+
+# Temporary test or intermediate files
+temp/
+tmp/
+test/
+debug/
+
+# =====================================================
+# Logs & cache
+# =====================================================
+logs/
+*.log
+*.bak
+*.cache
+.cache/
+__pycache__/
+
+# =====================================================
+# Jupyter notebooks checkpoints
+# =====================================================
+.ipynb_checkpoints/
