@@ -4,7 +4,7 @@ from pathlib import Path
 SN_TO_FOLDER = {
     "19274125": "cam0",
     "16471270": "cam1",
-    "19372172": "cam2",
+    "14135921": "cam2",
 }
 
 root = Path(".")
