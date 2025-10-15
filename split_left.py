@@ -22,12 +22,12 @@ for img_path in root.glob("cam*/Explorer_*.png"):
             sn_found = sn
             break
     if not sn_found:
-        print(f"跳过 {img_path.name} (无法识别SN)")
+        print(f"Skip {img_path.name} (cannot read this SN)")
         continue
 
     img = cv2.imread(str(img_path))
     if img is None:
-        print(f"无法读取 {img_path}")
+        print(f"can read {img_path}")
         continue
 
     h, w = img.shape[:2]
@@ -36,5 +36,5 @@ for img_path in root.glob("cam*/Explorer_*.png"):
     out_path = out_folder / f"{img_path.stem}_left.png"
 
     cv2.imwrite(str(out_path), left)
-    print(f"已保存 {out_path}")
+    print(f"Saved {out_path}")
 

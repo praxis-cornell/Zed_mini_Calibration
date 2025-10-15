@@ -36,14 +36,14 @@ def build_board_points(conf):
     tag = conf["tag_size_m"]; sp = conf["grid_spacing_m"]
     rows, cols = conf["grid_rows"], conf["grid_cols"]
     id_grid = conf["id_grid"]
-    # Board坐标：以左上角tag左上角为(0,0,0)，X向右，Y向下，Z=0
+    # Board axis: up-left tag left corner: (0,0,0)，X to right，Y to down，Z=0
     world_pts_by_id = {}
     for r in range(rows):
         for c in range(cols):
             tid = id_grid[r][c]
             x0 = c * sp
             y0 = r * sp
-            # 每个tag的4个角(按检测器顺序 [lt, rt, rb, lb])
+            # each tag's 4 corners ([lt, rt, rb, lb])
             corners = np.array([
                 [x0,          y0,           0.0],
                 [x0+tag,      y0,           0.0],
@@ -81,7 +81,7 @@ def pnp_from_multi_tags(img_gray, det, world_by_id, K, dist):
 def load_intrinsics(conf, cam_key):
     c = conf["zed_intrinsics"][cam_key]
     K = np.array([[c["fx"],0,c["cx"]],[0,c["fy"],c["cy"]],[0,0,1]],dtype=np.float64)
-    dist = np.zeros(5)  # 图像若已去畸变，可以用0；否则填真实畸变
+    dist = np.zeros(5)
     return K, dist
 
 def main():
