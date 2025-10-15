@@ -1,4 +1,4 @@
-1. Setup Zed SDK on PC
+1. Setup Zed SDK on PC (ZED_Explorer)
 2. Made Apriltag board (already have, if you made new one please change config in config_board.json)
 3. Captre images throgh SDK, redirect output dual-eye images path to ./cam*
 4. Change the camera SN number based on the cam you used.
