@@ -1,5 +1,4 @@
 # Print metadata.json
-print("Print metadata.json:")
 python - <<'PYCODE'
 import json, pprint
 with open("metadata.json", "r") as f:
@@ -8,7 +7,6 @@ pprint.pp(meta)
 PYCODE
 
 # Print calibrate.pkl
-print("Print calibrate.pkl:")
 python - <<'PYCODE'
 import pickle, numpy as np, pprint
 with open("calibrate.pkl", "rb") as f:
