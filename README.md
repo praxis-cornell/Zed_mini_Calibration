@@ -35,13 +35,14 @@ python apriltag_calib_c2w.py
 ## 4. Verification
 ```bash
 # Step 3. Validate calibration numerically
-python varify_calibration.py
+chmod +x calibrate_check.sh
+./calibrate_check.sh
 ```
 
 ## 5. Visualization
 ```bash
 # Step 4. 3D visualize camera poses & AprilTag board
-./calibrate_check.sh
+python varify_calibration.py
 ```
 
 ## 6. Output
