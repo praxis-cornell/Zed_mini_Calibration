@@ -1,4 +1,4 @@
-# ZED Multi-Camera Calibration (AprilTag 36h11)
+# ZED Multi-Camera Calibration (AprilTag)
 
 This repository provides a complete pipeline for calibrating **multiple ZED Mini cameras** using **AprilTag 36h11 markers**.
 
